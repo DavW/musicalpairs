@@ -6,6 +6,7 @@
     audio = new Pairs.Audio();
     records = [];
     showRecords = function(records) {
+      $("#cards").css("opacity", 1);
       return $("#cards").find("a").each(function(i, elem) {
         return $(this).click(function() {
           var url;

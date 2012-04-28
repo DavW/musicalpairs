@@ -3,6 +3,7 @@ require ["libpairs"], (Pairs) ->
 	audio = new Pairs.Audio()
 	records=[]
 	showRecords = (records) ->
+		$("#cards").css("opacity",1);
 		$("#cards").find("a").each (i,elem)->
 			$(this).click ->
 				url = lastfm.createPreviewUrl records[i]
