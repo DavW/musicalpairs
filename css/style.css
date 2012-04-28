@@ -155,7 +155,7 @@ input[type="text"] {
 	-webkit-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
-	text-indent:5px;
+	text-indent:10px;
 	font-size:1.4em;
 	margin-right:15px;
 }
@@ -174,6 +174,9 @@ input[type="submit"] {
 	font-weight:normal;
 	cursor:pointer;
 	padding:0 10px;
+	
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.3);
+	
 }
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
 	background:#b10000;
@@ -214,10 +217,12 @@ aside a.twitter {
 	-moz-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	text-indent:60px;
-	font-size:2em;
-	line-height:2em;
+	font-size:1.6em;
+	line-height:2.6em;
 	font-weight:normal;
 	margin-top:30px;
+	text-shadow: 2px 1px 1px rgba(255,255,255,0.6);
+	font-family:hevletica, arial, sans-serif;
 }
 aside a.twitter:hover, aside a.twitter:active, aside a.twitter:focus {
 	background:#c0c0c0 url(../img/twitter.png) 10px center no-repeat;
