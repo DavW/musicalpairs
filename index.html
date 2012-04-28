@@ -12,22 +12,29 @@
 		<![endif]-->
 		<script type="text/javascript">
 		</script>
+		<script type="text/javascript" src="js/lib/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="js/lib/soundmanager2.js"></script>
+		<script type="text/javascript">
+			soundManager.url='js/lib/swf/';
+			soundManager.useFlashBlock=false;
+		</script>
+		<script type="text/javascript" data-main="js/main" src="js/lib/require.js"></script>
 	</head>
 	<body>
 		<article>
 			<header>
 			<h1>Musical Pairs</h1>
 				<section id="controls">
-					<form>
+					<form id="controlsForm">
 						<input name="username" placeholder="type a genre or last.fm username" type="text">
 						<input type="radio" name="level" value="easy" checked /><p>Easy (audio + visual)</p>
 						<input type="radio" name="level" value="hard" /><p>Hard (audio only)</p>
 				 		<input type="submit" value="Refresh records">
-				</form>
-			</section>
+					</form>
+				</section>
 			</header>
 			<section class="game">
-				<ol>
+				<ol id="cards">
 					<li><a href="#"><img src="img/sprite.png" alt="card1"></a></li>
 					<li><a href="#"><img src="img/sprite.png" alt="card2"></a></li>
 					<li><a href="#"><img src="img/sprite.png" alt="card3"></a></li>
