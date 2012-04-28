@@ -59,7 +59,7 @@ a {
 	text-decoration:none;
 }
 /* Clearfix */
-.header:after, ul:after, .footer:after, .content:after, ol:after, #needs div:after, #needs:after {
+header:after, ul:after, footer:after {
 	content: ".";
 	display: block;
 	height: 0;
@@ -140,9 +140,10 @@ header {
 #controls {
 	float:left;
 	width:730px;
+	margin-top:15px;
 }
 header p {
-	font-size:1.25em;
+	font-size:1.2em;
 }
 input[type="text"] {
 	border:1px solid #ccc;
@@ -155,6 +156,8 @@ input[type="text"] {
 	-moz-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	text-indent:5px;
+	font-size:1.4em;
+	margin-right:15px;
 }
 input[type="submit"] {
 	border:none;
@@ -167,10 +170,13 @@ input[type="submit"] {
 	-webkit-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
 	box-shadow: inset 1px 1px 0px rgba(0,0,0,0.1);
-	text-indent:5px;
-	font-size:2em;
+	font-size:1.6em;
 	font-weight:normal;
 	cursor:pointer;
+	padding:0 10px;
+}
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+	background:#b10000;
 }
 .game {
 	width:725px;
@@ -185,9 +191,15 @@ input[type="submit"] {
 }
 aside {
 	float:left;
-	width:255px;
+	width:215px;
+	padding:20px;
 	background:#f9f9f9;
 	font-family: 'Amatic SC', cursive;
+	margin-left: 20px;
+}
+aside p {
+	font-size:4em;
+	line-height:0.8em;
 }
 aside a.twitter {
 	display:block;
@@ -205,6 +217,19 @@ aside a.twitter {
 	font-size:2em;
 	line-height:2em;
 	font-weight:normal;
+	margin-top:30px;
+}
+aside a.twitter:hover, aside a.twitter:active, aside a.twitter:focus {
+	background:#c0c0c0 url(../img/twitter.png) 10px center no-repeat;
+}
+.timer {
+	margin-bottom:30px;
+}
+.timer span {
+	padding-right:15px;
+}
+.score {
+	color:#666;
 }
 footer {
 	float:left;
