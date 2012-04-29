@@ -118,9 +118,13 @@ p {
 	font-weight:lighter;
 	margin-bottom:20px;
 }
-form p {
+form label {
 	display:inline;
 	margin:0 10px;
+	font-size:1.4em;
+}
+form label span {
+	font-size:0.8em;
 }
 a {
 	color:#cc0000;
@@ -220,6 +224,10 @@ aside p {
 	font-size:4em;
 	line-height:0.8em;
 }
+aside a {
+	font-size:1.2em;
+	font-family:hevletica, arial, sans-serif;
+}
 aside a.twitter {
 	display:block;
 	-webkit-border-radius: 3px;
@@ -236,9 +244,8 @@ aside a.twitter {
 	font-size:1.6em;
 	line-height:2.6em;
 	font-weight:normal;
-	margin-top:30px;
+	margin:30px 0 10px 0;
 	text-shadow: 2px 1px 1px rgba(255,255,255,0.6);
-	font-family:hevletica, arial, sans-serif;
 }
 aside a.twitter:hover, aside a.twitter:active, aside a.twitter:focus {
 	background:#c0c0c0 url(../img/twitter.png) 10px center no-repeat;
@@ -257,7 +264,7 @@ footer {
 	width:225px;
 	padding:5px 15px;
 	font-size:0.6em;
-	margin:10px 0 0 0;
+	margin:10px 0 0 20px;
 }
 #cards {
 	opacity:.5;

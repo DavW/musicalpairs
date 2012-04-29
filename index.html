@@ -27,8 +27,8 @@
 				<section id="controls">
 					<form id="controlsForm">
 						<input name="username" placeholder="Type a genre or last.fm username" type="text">
-						<input type="radio" name="level" value="easy" checked /><p>Easy (audio + visual)</p>
-						<input type="radio" name="level" value="hard" /><p>Hard (audio only)</p>
+						<input type="radio" name="level" value="easy" id="easy" checked /><label for="easy">Easy <span>(audio + visual)</span></label>
+						<input type="radio" name="level" value="hard" id="hard" /><label for="hard">Hard <span>(audio only)</span></label>
 				 		<input type="submit" value="Refresh records">
 					</form>
 				</section>
@@ -66,6 +66,7 @@
 					<p>Pairs: <span id="score_pairs">0</p>
 					<p>Points: <span id="score_points">0</score></p>
 					<a class="twitter" href="#">Tweet my score</a>
+					<a href="https://twitter.com/#!/search/realtime/%23musicalpairs">Check out the latest high scores on twitter</a>
 				</section>
 			</aside>
 			<footer>
