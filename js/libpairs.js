@@ -16,9 +16,14 @@
         url: url
       });
     };
-    Audio.prototype.playUrl = function(url) {
+    Audio.prototype.playUrl = function(url, stopOthers) {
       var id;
-      soundManager.stopAll();
+      if (stopOthers == null) {
+        stopOthers = true;
+      }
+      if (stopOthers) {
+        soundManager.stopAll();
+      }
       id = btoa(url);
       if (__indexOf.call(this.sounds, id) < 0) {
         this.sounds[id] = soundManager.createSound({

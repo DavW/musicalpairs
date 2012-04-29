@@ -3,8 +3,8 @@ class Audio
 		@sounds={}
 	preloadUrl: (url) ->
 		@sounds[btoa(url)] = soundManager.createSound({id: id, url: url})
-	playUrl: (url) ->
-		soundManager.stopAll()
+	playUrl: (url, stopOthers=true) ->
+		if stopOthers then soundManager.stopAll()
 		id=btoa(url)
 		if id not in @sounds
 			@sounds[id] = soundManager.createSound({id: id, url: url})
