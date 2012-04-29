@@ -24,7 +24,7 @@ class Lastfm
 			crossDomain: true
 			dataType: "json"
 			success: (response) ->
-				callback({artist:a.name, image:a.image[a.image.length-1]["#test"]} for a in response.topartists.artist[0..10])
+				callback({artist:a.name, image:a.image[2]["#text"]} for a in response.topartists.artist[0..10])
 	
 	getTracksForArtist: (artist, callback) ->
 		$.ajax @api_prefix+"artist.gettoptracks",
@@ -35,7 +35,7 @@ class Lastfm
 			crossDomain: true
 			dataType: "json"
 			success: (response) =>
-				callback({artist:artist, track:t.name} for t in response.toptracks.track when t.streamable["#text"]=="1")
+				callback({artist:artist, track:t.name, image:t.image?[2]?["#text"]} for t in response.toptracks.track when t.streamable["#text"]=="1")
 	
 	createPreviewUrl: (record) ->
 		@api_prefix+"track.getpreviewmp3&"+$.param({api_key:@api_key,artist:record.artist,track:record.track})

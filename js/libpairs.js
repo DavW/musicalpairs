@@ -59,7 +59,7 @@
               a = _ref[_i];
               _results.push({
                 artist: a.name,
-                image: a.image[a.image.length - 1]["#test"]
+                image: a.image[2]["#text"]
               });
             }
             return _results;
@@ -79,7 +79,7 @@
         success: __bind(function(response) {
           var t;
           return callback((function() {
-            var _i, _len, _ref, _results;
+            var _i, _len, _ref, _ref2, _ref3, _results;
             _ref = response.toptracks.track;
             _results = [];
             for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -87,7 +87,8 @@
               if (t.streamable["#text"] === "1") {
                 _results.push({
                   artist: artist,
-                  track: t.name
+                  track: t.name,
+                  image: (_ref2 = t.image) != null ? (_ref3 = _ref2[2]) != null ? _ref3["#text"] : void 0 : void 0
                 });
               }
             }

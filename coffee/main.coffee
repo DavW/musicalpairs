@@ -28,9 +28,14 @@ require ["libpairs"], (Pairs) ->
 		$("#cards").find("li").each (i,elem)->
 			console.log "Assigning record #{records[i]} to slot #{i}"
 			elem.record = records[i]
+			$(elem).find("span").css("background", "url("+elem.record.image+") no-repeat bottom left")
 			$(this).find("a").click ->
 				console.log "User clicked on record #{elem.record}"
+				
 				audio.playUrl lastfm.createPreviewUrl elem.record
+				$("#cards").find("a").removeClass("playing");
+				$(this).addClass("playing");
+				
 				if currentRecordElement!=null
 					console.log "Selected as item B"
 					if elem.record.artist==currentRecordElement.record.artist

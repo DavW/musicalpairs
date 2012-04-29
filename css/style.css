@@ -195,7 +195,18 @@ input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:fo
 	background:url("../img/sprite.png") no-repeat top left;
 }
 .game li a:hover, .game li a:active, .game li a:focus {
-	background-position:0 50%
+	background-position:0 50%;
+}
+.game li a.playing {
+	background-position: bottom left;
+}
+.game li span {
+	width:126px;
+	height:126px;
+	margin-right:15px;
+	margin-bottom:15px;
+	display:block;
+	float:left;
 }
 aside {
 	float:left;
